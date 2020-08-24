@@ -1,0 +1,99 @@
+.navigation {
+  width: 100%;
+
+  // @media (max-width: $md3+px) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   margin-bottom: 0;
+  //   position: fixed;
+  //   top: -100%;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   overflow: auto;
+  //   transition: all 0.6s ease 0s;
+  //   padding: 100px 10px 20px 10px;
+  //   z-index: 2;
+
+  //   &.active {
+  //     top: 0;
+  //     background-color: $active-color;
+  //   }
+  // }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+
+    @media (max-width: $md4+px) {
+      flex-direction: column;
+    }
+
+    & li {
+      margin-left: 25px;
+      margin-right: 25px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        @media (max-width: $md4+px) {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: $md4+px) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__link {
+    color: $list-color;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+
+    @media (max-width: $md4+px) {
+      font-size: 20px;
+    }
+
+    &.active {
+      color: $active-color;
+      font-weight: 400;
+
+      &:hover,
+      &:focus {
+        color: $active-color;
+      }
+
+      &:active {
+        color: $active-color;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($active-color, 0.9);
+      transition: all 0.3s ease 0s;
+      outline: none;
+    }
+
+    &:active {
+      color: rgba($active-color, 0.6);
+      transition: all 0.1s ease 0s;
+    }
+  }
+}

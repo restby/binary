@@ -1,0 +1,28 @@
+.portfolio {
+  padding-top: 105px;
+  padding-bottom: 60px;
+  background-color: $bg-portfolio-color;
+
+  @media (max-width: $md3+px) {
+    padding-top: 45px;
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-top: 45px;
+
+    @media (max-width: $md3+px) {
+      margin-top: 30px;
+    }
+  }
+}

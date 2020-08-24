@@ -1,0 +1,51 @@
+.main-footer {
+  background-color: $bg-footer-color;
+  padding-top: 48px;
+  padding-bottom: 45px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  & .container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+
+    & li {
+      margin-left: 12px;
+      margin-right: 12px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__item {
+    color: $social-color;
+    text-decoration: none;
+  }
+
+  &__rights {
+    color: $footer-text-color;
+  }
+}
