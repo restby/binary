@@ -33,7 +33,7 @@ let { src, dest } = require("gulp"),
   fileinclude = require("gulp-file-include"),
   del = require("del"),
   scss = require("gulp-sass"),
-  autoprefixer = require("gulp-autoprefixer"),
+  autoprefixer = require("autoprefixer"),
   group_media = require("gulp-group-css-media-queries"),
   clean_css = require("gulp-clean-css"),
   rename = require("gulp-rename"),
@@ -47,7 +47,6 @@ let { src, dest } = require("gulp"),
   ttf2woff2 = require('gulp-ttf2woff2'),
   fonter = require("gulp-fonter"),
   plumber = require("gulp-plumber"),
-  sourcemap = require("gulp-sourcemaps"),
   svgstore = require("gulp-svgstore"),
   posthtml = require("gulp-posthtml"),
   include = require("posthtml-include"),
@@ -114,37 +113,33 @@ function html() {
 }
 function css() {
   return src(path.src.css)
-    .pipe(plumber())
-    .pipe(sourcemap.init())
     .pipe(
       scss({
         outputStyle: "expanded",
       })
     )
-    .pipe(group_media())
-    .pipe(
-      autoprefixer({
-        grid: true,
-        overrideBrowserslist: ["last 5 versions"],
-        cascade: true,
-      })
-    )
     .pipe(
       postcss([
+        autoprefixer({
+          grid: "autoplace",
+          cascade: true,
+        }),
         cssDeclarationSorter({
           order: "concentric-css",
         }),
       ])
     )
+    .pipe(group_media())
     .pipe(webpcss())
     .pipe(dest(path.build.css))
-    .pipe(clean_css())
     .pipe(
       rename({
         extname: ".min.css",
       })
     )
-    .pipe(sourcemap.write("."))
+    .pipe(clean_css({
+      level: 2,
+    }))
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream());
 }

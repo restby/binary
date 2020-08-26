@@ -47,4 +47,17 @@ filterItems.forEach(function (item) {
   });
 });
 
+/*scroll to*/
+$('.navigation__link').click(function () {
+  $('.navigation__link').removeClass('active');
+  $(this).toggleClass('active');
+  let scroll_el = $(this).attr('href');
+  let destination = $(scroll_el).offset().top;
+  if ($(scroll_el).length != 0) {
+    $('html, body').animate({ scrollTop: destination }, 800);
+  }
+  return false;
+});
+
+
 

@@ -39,7 +39,7 @@
 <body>
   <div class="wrapper webp">
 
-    <div class="fullscreen">
+    <div class="fullscreen" id="fullscreen">
       <div class="fullscreen__wrap ibg">
         <img src="img/bg-header.png" alt="Binary">
       </div>
@@ -47,7 +47,7 @@
       <div class="fullscreen__body">
         <div class="container">
           <div class="fullscreen__logo-wrap">
-            <a class="fullscreen__logo-link" href="#">
+            <a class="fullscreen__logo-link">
               <img class="fullscreen__logo" src="img/logo.png" alt="logo Binary">
             </a>
           </div>
@@ -56,8 +56,8 @@
             <p class="fullscreen__subslogan">for your app, logo, website</p>
           </div>
           <div class="fullscreen__buttons">
-            <a class="fullscreen__btn btn btn--white" href="#">READ MORE</a>
-            <button class="fullscreen__link" type="button"></button>
+            <a class="fullscreen__btn btn btn--white" href="#" aria-label="link to ...">READ MORE</a>
+            <div class="fullscreen__link"></div>
           </div>
         </div>
       </div>
@@ -67,23 +67,19 @@
 
     <header class="main-header">
       <div class="container">
-        <button class="main-header__burger" aria-label="mobile menu">
-          <span></span>
-        </button>
-        <!-- /.main-header__burger -->
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li>
-              <a class="navigation__link active" href="#" aria-label="link to section home">home</a>
+              <a class="navigation__link active" href="#fullscreen" aria-label="link to section home">home</a>
             </li>
             <li>
-              <a class="navigation__link" href="#" aria-label="link to section about">about us</a>
+              <a class="navigation__link" href="#about" aria-label="link to section about">about us</a>
             </li>
             <li>
-              <a class="navigation__link" href="#" aria-label="link to section portfolio">portfolio</a>
+              <a class="navigation__link" href="#portfolio" aria-label="link to section portfolio">portfolio</a>
             </li>
             <li>
-              <a class="navigation__link" href="#" aria-label="link to section contact">contact</a>
+              <a class="navigation__link" href="#contact" aria-label="link to section contact">contact</a>
             </li>
           </ul>
         </nav>
@@ -95,7 +91,7 @@
     <main class="content">
       <h1 class="visually-hidden">Binary</h1>
       <!-- /.visually-hidden -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__top">
             <h2 class="about__title section-title">ABOUT</h2>
@@ -132,60 +128,60 @@
       </section>
       <!-- /.about -->
 
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <h2 class="portfolio__title section-title">PORTFOLIO</h2>
           <div class="filter">
             <nav class="filter__wrap">
               <ul class="filter__list">
                 <li>
-                  <button data-filter="1" class="filter__item active">ALL</button>
+                  <button data-filter="1" class="filter__item active" aria-label="filter projects for All">ALL</button>
                 </li>
                 <li>
-                  <button data-filter="2" class="filter__item">WEB</button>
+                  <button data-filter="2" class="filter__item" aria-label="filter projects for Web">WEB</button>
                 </li>
                 <li>
-                  <button data-filter="3" class="filter__item">APPS</button>
+                  <button data-filter="3" class="filter__item" aria-label="filter projects for Apps">APPS</button>
                 </li>
                 <li>
-                  <button data-filter="4" class="filter__item">OTHER</button>
+                  <button data-filter="4" class="filter__item" aria-label="filter projects for Other">OTHER</button>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="filter-content gallery">
             <div class="filter-content__col filter-2">
-              <a class="filter-content__link" href="img/projects/1.jpg">
-                <img class="filter-content__img" src="img/projects/1.jpg" alt="">
+              <a class="filter-content__link" href="img/projects/1.jpg" aria-label="link project 1">
+                <img class="filter-content__img" src="img/projects/1.jpg" alt="project 1">
               </a>
             </div>
             <div class="filter-content__col filter-3">
-              <a class="filter-content__link" href="img/projects/2.jpg">
-                <img class="filter-content__img" src="img/projects/2.jpg" alt="">
+              <a class="filter-content__link" href="img/projects/2.jpg" aria-label="link project 2">
+                <img class="filter-content__img" src="img/projects/2.jpg" alt="project 2">
               </a>
             </div>
             <div class="filter-content__col filter-4">
-              <a class="filter-content__link" href="img/projects/1.jpg">
-                <img class="filter-content__img" src="img/projects/1.jpg" alt="">
+              <a class="filter-content__link" href="img/projects/1.jpg" aria-label="link project 3">
+                <img class="filter-content__img" src="img/projects/1.jpg" alt="project 3">
               </a>
             </div>
             <div class="filter-content__col filter-3">
-              <a class="filter-content__link" href="img/projects/2.jpg">
-                <img class="filter-content__img" src="img/projects/2.jpg" alt="">
+              <a class="filter-content__link" href="img/projects/2.jpg" aria-label="link project 4">
+                <img class="filter-content__img" src="img/projects/2.jpg" alt="project 4">
               </a>
             </div>
-            <div class="filter-content__col filter-2">
+            <div class="filter-content__col filter-2" aria-label="link project 5">
               <a class="filter-content__link" href="img/projects/1.jpg">
-                <img class="filter-content__img" src="img/projects/1.jpg" alt="">
+                <img class="filter-content__img" src="img/projects/1.jpg" alt="project 5">
               </a>
             </div>
             <div class="filter-content__col filter-4">
-              <a class="filter-content__link" href="img/projects/2.jpg">
-                <img class="filter-content__img" src="img/projects/2.jpg" alt="">
+              <a class="filter-content__link" href="img/projects/2.jpg" aria-label="link project 6">
+                <img class="filter-content__img" src="img/projects/2.jpg" alt="project 6">
               </a>
             </div>
           </div>
-          <a href="#" class="portfolio__btn btn">Read more</a>
+          <a href="#" class="portfolio__btn btn" aria-label="link to ...">Read more</a>
         </div>
         <!-- /.container -->
       </section>
@@ -200,23 +196,23 @@
           <!-- /.partners__title -->
           <ul class="partners__list">
             <li>
-              <a class="partners__link" href="#">
-                <img src="img/partners/1.png" alt="">
+              <a class="partners__link" href="#" aria-label="link to partner 1">
+                <img src="img/partners/1.png" alt="partner 1">
               </a>
             </li>
             <li>
-              <a class="partners__link" href="#">
-                <img src="img/partners/2.png" alt="">
+              <a class="partners__link" href="#" aria-label="link to partner 2">
+                <img src="img/partners/2.png" alt="partner 2">
               </a>
             </li>
             <li>
-              <a class="partners__link" href="#">
-                <img src="img/partners/3.png" alt="">
+              <a class="partners__link" href="#" aria-label="link to partner 3">
+                <img src="img/partners/3.png" alt="partner 3">
               </a>
             </li>
             <li>
-              <a class="partners__link" href="#">
-                <img src="img/partners/4.png" alt="">
+              <a class="partners__link" href="#" aria-label="link to partner 4">
+                <img src="img/partners/4.png" alt="partner 4">
               </a>
             </li>
           </ul>
@@ -226,7 +222,7 @@
       </section>
       <!-- /.partners -->
 
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <h2 class="contact__title section-title">Contact</h2>
           <!-- /.contact__title section-title -->
@@ -258,16 +254,16 @@
               <b>Postma Elena</b>
               <ul class="contact__social-list">
                 <li>
-                  <a href="#" class="contact__social-link">
+                  <a class="contact__social-link" href="#" aria-label="link to Facebook">
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="contact__social-link">
+                  <a class="contact__social-link" href="#" aria-label="link to Linkedin">
                   </a>
                 </li>
               </ul>
-              <span>e-mail: </span><a href="mailto:postma.elena@gmail.com"
-                class="contact__link">postma.elena@gmail.com</a>
+              <span>e-mail: </span><a href="mailto:postma.elena@gmail.com" class="contact__link"
+                aria-label="write to postma.elena@gmail.com">postma.elena@gmail.com</a>
             </div>
             <!-- /.contact__col -->
           </div>
@@ -282,27 +278,27 @@
     <footer class="main-footer">
       <div class="container">
         <div class="main-footer__logo-wrap">
-          <a class="main-footer__logo-link" href="#">
+          <a class="main-footer__logo-link">
             <img class="main-footer__logo" src="img/logo.png" alt="logo Binary">
           </a>
         </div>
         <nav class="main-footer__nav">
           <ul class="main-footer__list">
             <li>
-              <a class="main-footer__item" href="#">Home</a>
+              <a class="main-footer__item" href="#fullscreen" aria-label="link to home">Home</a>
             </li>
             <li>
-              <a class="main-footer__item" href="#">Facebook</a>
+              <a class="main-footer__item" href="#" aria-label="link to Facebook">Facebook</a>
             </li>
             <li>
-              <a class="main-footer__item" href="#">Linkedin</a>
+              <a class="main-footer__item" href="#" aria-label="link to Linkedin">Linkedin</a>
             </li>
             <li>
-              <a class="main-footer__item" href="#">Contact</a>
+              <a class="main-footer__item" href="#contact" aria-label="link to contact">Contact</a>
             </li>
           </ul>
         </nav>
-        <p class="main-footer__rights">© 2015. All Rights Reserved</p>
+        <p class="main-footer__rights">© 20//. All Rights Reserved</p>
       </div>
       <!-- /.container -->
     </footer>

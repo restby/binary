@@ -24,6 +24,10 @@
       flex-direction: column;
       align-items: center;
     }
+
+    @media (max-width: $md4+px) {
+      margin: 0;
+    }
   }
 
   &__col {
@@ -48,6 +52,10 @@
 
       @media (max-width: $md3+px) {
         flex: 0 1 100%;
+      }
+
+      @media (max-width: $md4+px) {
+        padding: 0;
       }
 
       & b {
@@ -153,6 +161,12 @@
       padding-left: 30px;
       padding-right: 30px;
       margin-bottom: 75px;
+
+      @media (max-width: $md4+px) {
+        flex: 0 1 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     &:nth-child(2) {
@@ -160,6 +174,12 @@
       padding-left: 30px;
       padding-right: 30px;
       margin-bottom: 75px;
+
+      @media (max-width: $md4+px) {
+        flex: 0 1 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     &:nth-child(3) {
@@ -167,6 +187,12 @@
       padding-left: 30px;
       padding-right: 30px;
       margin-bottom: 40px;
+
+      @media (max-width: $md4+px) {
+        flex: 0 1 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 
